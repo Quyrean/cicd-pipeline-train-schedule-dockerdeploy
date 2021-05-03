@@ -14,7 +14,7 @@ pipeline {
             }
             steps {
                 script {
-                    def appImage = docker.build("quyrean/train-schedule")
+                    appImage = docker.build("quyrean/train-schedule")
                     appImage.inside {
                         sh 'echo $(curl localhost:8080)'
                     }
